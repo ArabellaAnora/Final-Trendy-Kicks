@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/trendykickslogo.jpg">
+	<!-- Author Meta -->
+	<meta name="author" content="Sole Seeker Team">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Trendy Kicks</title>
+
+	<!--
+		CSS
+		============================================= -->
+	<link rel="stylesheet" href="css/linearicons.css">
+	<link rel="stylesheet" href="css/owl.carousel.css">
+	<link rel="stylesheet" href="css/themify-icons.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/nouislider.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+	<!-- Start Header Area -->
+	<header class="header_area sticky-header">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light main_box">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="img/trendykickslogo.jpg"  width = "120px" height ="100px" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="category.html">Shop</a></li>
+							<!--Navigation Bar other contents
+							<li class="nav-item submenu dropdown">
+								<a href="category.html" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Shop</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="category.html">Shop Category</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
+									<li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
+									<li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
+									<li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
+								</ul>
+							</li>
+						-->
+
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li class="nav-item"><a href="cart.html" class="cart"><span class="ti-shopping-cart"></span></a></li>
+							<li class="nav-item" id="profilevisit"><a href="javascript:void(0)"><span class="lnr lnr-user"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- End Header Area -->
+
+	<!-- Start Banner Area -->
+	<section class="banner-area organic-breadcrumb">
+		<div class="container">
+			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+				<div class="col-first">
+					<h1 style="color: orange; text-shadow: 2px 2px #ffffff; font-size: 50px;">Confirmation</h1>
+					<nav class="d-flex align-items-center">
+						<a href="index.html" style="color: orange; text-shadow: 2px 2px #ffffff; font-size: 25px;">Home<span class="lnr lnr-arrow-right"></span></a>
+						<a href="category.html" style="color: orange; text-shadow: 2px 2px #ffffff; font-size: 25px;">Confirmation</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Banner Area -->
+
+	<!--================Order Details Area =================-->
+	<section class="order_details section_gap">
+		<div class="container">
+			<h3 class="title_confirmation">Thank you. Your order has been received!</h3>
+			<div class="row order_d_inner">
+				<div class="col-lg-4">
+					<div class="details_item">
+						<h4>Order Info</h4>
+						<ul class="list">
+							<li><a href="javascript:void(0)"><span>Order number</span> : <span id="orderN" style="color:black"></span></a></li>
+							<li><a href="javascript:void(0)"><span>Date</span> : <span id="dateT" style="color:black"></span></a></li>
+							<li><a href="javascript:void(0)"><span>Total</span> : <span id="totalC" style="color:black"></span></a></li>
+							<li><a href="javascript:void(0)"><span>Payment method</span> : <span id="payM" style="color:black"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="details_item">
+						<h4>Billing Address</h4>
+						<ul class="list">
+							<li><a href="javascript:void(0)"><span>Street</span> : <span id="streetBilling" style="color:black"></span></a></li>
+							<li><a href="javascript:void(0)"><span>City</span> : <span id="cityBilling" style="color:black"></span></a></li>
+							<li><a href="javascript:void(0)"><span>Country</span> : <span id="countryBilling" style="color:black"></span></a></li>
+							<li><a href="javascript:void(0)"><span>Postcode </span> : <span id="zipBilling" style="color:black"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="details_item">
+						<h4>Shipping Address</h4>
+						<ul class="list">
+							<li><a href="javascript:void(0)"><span>Street</span> : <span id="sstreetBilling" style="color:black"></span></a></li>
+							<li><a href="javascript:void(0)"><span>City</span> : <span id="scityBilling" style="color:black"></span></a></li>
+							<li><a href="javascript:void(0)"><span>Country</span> : <span id="scountryBilling" style="color:black"></span></a></li>
+							<li><a href="javascript:void(0)"><span>Postcode </span> : <span id="szipBilling" style="color:black"></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="order_details_table">
+				<h2>Order Details</h2>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Product</th>
+								<th scope="col">Quantity</th>
+								<th scope="col">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<p>Pixelstore fresh Blackberry</p>
+								</td>
+								<td>
+									<h5>x 02</h5>
+								</td>
+								<td>
+									<p>$720.00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Pixelstore fresh Blackberry</p>
+								</td>
+								<td>
+									<h5>x 02</h5>
+								</td>
+								<td>
+									<p>$720.00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Pixelstore fresh Blackberry</p>
+								</td>
+								<td>
+									<h5>x 02</h5>
+								</td>
+								<td>
+									<p>$720.00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h4>Subtotal</h4>
+								</td>
+								<td>
+									<h5></h5>
+								</td>
+								<td>
+									<p>$2160.00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h4>Shipping</h4>
+								</td>
+								<td>
+									<h5></h5>
+								</td>
+								<td>
+									<p>Flat rate: $50.00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<h4>Total</h4>
+								</td>
+								<td>
+									<h5></h5>
+								</td>
+								<td>
+									<p>$2210.00</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Order Details Area =================-->
+
+	<!-- start footer Area -->
+	<footer class="footer-area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>About Us</h6>
+						<p>
+							Trendy Kicks is the leading footwear store in the Province of Rizal and NCR.
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-4  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Newsletter</h6>
+						<p>Get in Touch With Us</p>
+						<div class="" id="mc_embed_signup">
+
+							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+							 method="get" class="form-inline">
+
+								<div class="d-flex flex-row">
+
+									<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
+									 required="" type="email">
+
+
+									<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+									<div style="position: absolute; left: -5000px;">
+										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+									</div>
+
+									<!-- <div class="col-lg-4 col-md-4">
+												<button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+											</div>  -->
+								</div>
+								<div class="info"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget mail-chimp">
+						<h6 class="mb-20">Facebook Feed</h6>
+						<ul class="instafeed d-flex flex-wrap">
+							<li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02iaNKzhT5rQA87iHFxkrr4dHXPi3eKQBJwK7E4J2GWiG5zPFyDgVoaXQv91dK77DUl&id=100088232736873"><img src="img/sb1.png" alt=""></a></li>
+							<li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02iaNKzhT5rQA87iHFxkrr4dHXPi3eKQBJwK7E4J2GWiG5zPFyDgVoaXQv91dK77DUl&id=100088232736873"><img src="img/sb4.png" alt=""></a></li>
+							<li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02iaNKzhT5rQA87iHFxkrr4dHXPi3eKQBJwK7E4J2GWiG5zPFyDgVoaXQv91dK77DUl&id=100088232736873"><img src="img/sb6.png" alt=""></a></li>
+							<li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02iaNKzhT5rQA87iHFxkrr4dHXPi3eKQBJwK7E4J2GWiG5zPFyDgVoaXQv91dK77DUl&id=100088232736873"><img src="img/sb8.png" alt=""></a></li>
+							<li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02iaNKzhT5rQA87iHFxkrr4dHXPi3eKQBJwK7E4J2GWiG5zPFyDgVoaXQv91dK77DUl&id=100088232736873"><img src="img/sb9.png" alt=""></a></li>
+							<li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02iaNKzhT5rQA87iHFxkrr4dHXPi3eKQBJwK7E4J2GWiG5zPFyDgVoaXQv91dK77DUl&id=100088232736873"><img src="img/sb7.png" alt=""></a></li>
+							<li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02iaNKzhT5rQA87iHFxkrr4dHXPi3eKQBJwK7E4J2GWiG5zPFyDgVoaXQv91dK77DUl&id=100088232736873"><img src="img/sb2.png" alt=""></a></li>
+							<li><a href="https://www.facebook.com/permalink.php?story_fbid=pfbid02iaNKzhT5rQA87iHFxkrr4dHXPi3eKQBJwK7E4J2GWiG5zPFyDgVoaXQv91dK77DUl&id=100088232736873"><img src="img/sb3.png" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Follow Us</h6>
+						<p>Let us be social</p>
+						<div class="footer-social d-flex align-items-center">
+							<a href="#"><i class="fa fa-facebook "></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+				
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+
+
+
+
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/nouislider.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+
+<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+import { getDatabase, ref, get, set, push } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+
+	// TODO: Add SDKs for Firebase products that you want to use
+	// https://firebase.google.com/docs/web/setup#available-libraries
+  
+	// Your web app's Firebase configuration
+	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	const firebaseConfig = {
+	  apiKey: "AIzaSyA2FHdPmciDepMuSGvfjlMXLzVP2u0FLj8",
+	  authDomain: "trendy-auth.firebaseapp.com",
+	  databaseURL: "https://trendy-auth-default-rtdb.firebaseio.com",
+	  projectId: "trendy-auth",
+	  storageBucket: "trendy-auth.appspot.com",
+	  messagingSenderId: "1098155513806",
+	  appId: "1:1098155513806:web:3cf3d13be6f0292884fd9f",
+	  measurementId: "G-9TDD84MPWK"
+	};
+  
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const auth = getAuth(app);
+
+onAuthStateChanged(auth, function(user) {
+  if (user) {
+    var uid = user.uid;
+    var db = getDatabase(app);
+    var today = new Date();
+    var todayFormatted = today.toISOString().split('T')[0];
+
+    var userDataRef = ref(db, 'users/' + uid + '/userData');
+    var orderDataRef = ref(db, 'users/' + uid + '/orders/' + todayFormatted);
+
+	Promise.all([get(userDataRef), get(orderDataRef)])
+      .then((snapshots) => {
+        var userDataSnapshot = snapshots[0];
+        var orderDataSnapshot = snapshots[1];
+
+        if (userDataSnapshot.exists()) {
+          var userData = userDataSnapshot.val();
+
+		  document.getElementById("dateT").textContent = localStorage.getItem("orderDate");
+		  document.getElementById("totalC").textContent = "₱" + parseFloat(localStorage.getItem("totalPayment")).toLocaleString();
+          document.getElementById("payM").textContent = localStorage.getItem("paymentM" ,"E-Wallet");
+
+          document.getElementById("orderN").textContent = userData.first;
+          document.getElementById("streetBilling").textContent = userData.add1;
+          document.getElementById("cityBilling").textContent = userData.city;
+          document.getElementById("countryBilling").textContent = userData.country1;
+          document.getElementById("zipBilling").textContent = userData.zip;
+
+          document.getElementById("sstreetBilling").textContent = userData.add1;
+          document.getElementById("scityBilling").textContent = userData.city;
+          document.getElementById("scountryBilling").textContent = userData.country1;
+          document.getElementById("szipBilling").textContent = userData.zip;
+        } else {
+          console.log("No user data available");
+        }
+
+        if (orderDataSnapshot.exists()) {
+          var orderData = orderDataSnapshot.val();
+
+          // Update table content with order details
+          const tbody = document.querySelector('.table tbody');
+          tbody.innerHTML = ''; // Clear the existing content
+
+		  let subtotal = 0;
+		  let shippingCost = 0;
+		  let totalV = 0;
+
+          for (const orderKey in orderData) {
+			if (Object.hasOwnProperty.call(orderData, orderKey)) {
+    const order = orderData[orderKey];
+
+	totalV = order.totalPrice;
+
+    // Create a new row for the order
+    const newRow = document.createElement('tr');
+    const productCell = document.createElement('td');
+    productCell.innerHTML = order.name;
+    newRow.appendChild(productCell);
+
+    const quantityCell = document.createElement('td');
+    quantityCell.innerHTML = `x ${order.quantity}`;
+    newRow.appendChild(quantityCell);
+
+    const totalCell = document.createElement('td');
+	totalCell.innerHTML =  totalV.toLocaleString('en-US', { style: 'currency', currency: 'PHP' });
+    newRow.appendChild(totalCell);
+
+    tbody.appendChild(newRow);
+
+    subtotal += order.totalPrice;
+    shippingCost = order.shippingCost;
+
+            }
+          }
+		  
+	const subtotalRow = document.createElement('tr');
+	const subtotalNameCell = document.createElement('td');
+	subtotalNameCell.innerHTML = '<h4>Subtotal</h4>';
+	subtotalRow.appendChild(subtotalNameCell);
+
+	const emptyCell1 = document.createElement('td');
+	emptyCell1.innerHTML = '<h5></h5>';
+	subtotalRow.appendChild(emptyCell1);
+
+	const subtotalTotalCell = document.createElement('td');
+	subtotalTotalCell.innerHTML =  subtotal.toLocaleString('en-US', { style: 'currency', currency: 'PHP' });
+	subtotalRow.appendChild(subtotalTotalCell);
+
+	tbody.appendChild(subtotalRow);
+
+	const shippingRow = document.createElement('tr');
+	const shippingNameCell = document.createElement('td');
+	shippingNameCell.innerHTML = '<h4>Shipping</h4>';
+	shippingRow.appendChild(shippingNameCell);
+
+	const emptyCell2 = document.createElement('td');
+	emptyCell2.innerHTML = '<h5></h5>';
+	shippingRow.appendChild(emptyCell2);
+
+	const shippingTotalCell = document.createElement('td');
+	shippingTotalCell.innerHTML = `₱${shippingCost.toFixed(2)}`;
+	shippingRow.appendChild(shippingTotalCell);
+
+	tbody.appendChild(shippingRow);
+
+	const totalRow = document.createElement('tr');
+	const totalNameCell = document.createElement('td');
+	totalNameCell.innerHTML = '<h4>Total</h4>';
+	totalRow.appendChild(totalNameCell);
+
+	const emptyCell3 = document.createElement('td');
+	emptyCell3.innerHTML = '<h5></h5>';
+	totalRow.appendChild(emptyCell3);
+
+	const totalTotalCell = document.createElement('td');
+	const grandTotal = subtotal + shippingCost;
+	totalTotalCell.innerHTML =  grandTotal.toLocaleString('en-US', { style: 'currency', currency: 'PHP' });
+	totalRow.appendChild(totalTotalCell);
+
+	tbody.appendChild(totalRow);
+        } else {
+          console.log("No order data available");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+});
+
+onAuthStateChanged(auth, function (user) {
+  if (user) {
+    var uid = user.uid;
+	
+	//profilevisit on click
+	var profilevisit = document.getElementById("profilevisit");
+	profilevisit.addEventListener("click", function() {
+		window.location.href = "./Customer/user-profile.html";
+	});
+} else {
+	var profilevisit = document.getElementById("profilevisit");
+	profilevisit.addEventListener("click", function() {
+		window.location.href = "./Login With Registration/index.html";
+	});
+}
+});
+
+
+	</script>
+</html>

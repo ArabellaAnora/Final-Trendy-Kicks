@@ -1,0 +1,26 @@
+$primary-color	: #1f1f1f;
+$primary-color3	: #545454;
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+
+
+
+
+// including variables and mixins
+@import "theme/variables";
+@import "theme/mixins";
+@import "theme/predefine";
+@import "theme/reset";
+
+
+// Custom Scss 
+@import "theme/elements";
+@import "theme/header";
+@import "theme/banner";
+@import "theme/home";
+@import "theme/common";
+@import "theme/product";
+@import "theme/blog";
+@import "theme/contact";
+@import "theme/footer";

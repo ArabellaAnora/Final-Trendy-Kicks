@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+
+  
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="images/iloveimg-resized/Front.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Welcome back<br> to Trendy Kicks</span>
+          <span class="text-2">Your Solemate is waiting for you</span>
+        </div>
+      </div>
+      <div class="back">
+        <img class="backImg" src="images/iloveimg-resized/Back.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Register <br>Now!</span>
+          <span class="text-2">Find your Perfect Solemate</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+          <!-- wrong password -->
+          <div class="alert alert-danger" role="alert" id="alert" style="display: none;">
+            <p>Incorrect email or password.</p>
+       </div> 
+                 <!-- put email caution -->
+                 <div class="alert alert-warning" role="warning" id="warning" style="display: none;">
+                  <p id="putemail">Please enter the email you use to sign in.</p>
+             </div> 
+
+          <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Enter your password" required>
+              </div>
+              <div class="text"><a href="#" name="forgot-btn" id="forgot-btn">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Submit" id ="login-btn">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip">Sign up now</label></div>
+            </div>
+        </form>
+      </div>
+        <div class="signup-form" id = "signup">
+          <div class="title">Sign up</div>
+
+          <div class="alert alert-warning" role="warning-signup" id="warning-signup" style="display: none;">
+            <p id="signuptext">Name, Email & Password can't be blank.</p>
+       </div> 
+       <div class="alert alert-warning" role="warning-signup-password" id="warning-signup-password" style="display: none;">
+        <p id="signuptextpass">Password must be at least 6 characters long.</p>
+   </div> 
+
+        <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email-sign" name="email-sign" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password-sign" name="password-sign" placeholder="Enter your password" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Submit" id = "signup-btn">
+              </div>
+              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+  
+
+</body>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail, createUserWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+  import { ref, set, getDatabase } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA2FHdPmciDepMuSGvfjlMXLzVP2u0FLj8",
+    authDomain: "trendy-auth.firebaseapp.com",
+    databaseURL: "https://trendy-auth-default-rtdb.firebaseio.com",
+    projectId: "trendy-auth",
+    storageBucket: "trendy-auth.appspot.com",
+    messagingSenderId: "1098155513806",
+    appId: "1:1098155513806:web:3cf3d13be6f0292884fd9f",
+    measurementId: "G-9TDD84MPWK"
+  };
+
+  const app = initializeApp(firebaseConfig);
+
+//login with validation if email and password is incorrect
+const loginBtn = document.getElementById("login-btn");
+
+loginBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const auth = getAuth(app);
+
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      if (user.emailVerified) {
+        document.getElementById("warning").style.color = "#155724";
+        document.getElementById("warning").style.backgroundColor = "#d4edda";
+        document.getElementById("warning").style.borderColor = "#c3e6cb";
+        document.getElementById('putemail').innerText = 'Logging in...';
+        document.getElementById("warning").style.display = "block";
+        document.getElementById("alert").style.display = "none";
+
+        setTimeout(function () {
+          if (localStorage.getItem("fromcheckout") === "true") {
+            window.location.href = "../checkout.html"; 
+            localStorage.removeItem("fromcheckout"); 
+          } else {
+            window.location.href = "../index.html"; 
+          }
+        }, 2000);
+      } else {
+        // User email not verified
+        document.getElementById('putemail').innerText = 'Email not verified.';
+        document.getElementById("warning").style.display = "block";
+        document.getElementById("alert").style.display = "none";
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      document.getElementById("alert").style.display = "block";
+    });
+});
+
+
+
+
+// sign up with validation: check if name, email, and password are not empty, and if the password is at least 6 characters long
+const signupBtn = document.getElementById("signup-btn");
+signupBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email-sign").value;
+  const password = document.getElementById("password-sign").value;
+
+  if (name === "" || email === "" || password === "") {
+    document.getElementById("warning-signup").style.display = "block";
+  } else if (password.length < 6) {
+    document.getElementById("warning-signup").style.display = "none";
+    document.getElementById("warning-signup-password").style.display = "block";
+
+  } else {
+    document.getElementById("warning-signup").style.color="#155724";
+    document.getElementById("warning-signup").style.backgroundColor="#d4edda";
+    document.getElementById("warning-signup").style.borderColor="#c3e6cb";
+
+    document.getElementById('signuptext').innerText = 'Signup complete! Please verify the email address for ' + email
+    document.getElementById("warning-signup").style.display = "block";
+    document.getElementById("warning-signup-password").style.display = "none";
+
+    const auth = getAuth(app);
+    
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        //send email verification
+        sendEmailVerification(userCredential.user)
+          .then(() => {
+            //database save
+            const userId = userCredential.user.uid;
+            const db = getDatabase();
+            const userRef = ref(db, `users/${userId}`);
+            set(userRef, {
+              name: name,
+              email: email,
+            });
+          })
+          .catch((error) => {
+            console.error("Error sending verification email: ", error);
+          });
+
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+});
+
+
+
+  //forgot password with validation if email field is empty
+  const forgotBtn = document.getElementById("forgot-btn");
+  forgotBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      if (email == "") {
+        document.getElementById("warning").style.display = "block";
+        document.getElementById("alert").style.display = "none";
+
+      } else {
+          const auth = getAuth(app);
+          sendPasswordResetEmail(auth, email)
+              .then(() => {
+                document.getElementById("warning").style.color="#155724";
+                document.getElementById("warning").style.backgroundColor="#d4edda";
+                document.getElementById("warning").style.borderColor="#c3e6cb";
+
+                document.getElementById('putemail').innerText = 'Password reset email sent!'
+                document.getElementById("warning").style.display = "block";
+                document.getElementById("alert").style.display = "none";
+
+              })
+              .catch((error) => {
+                  console.error(error);
+              });
+      }
+  });
+
+  
+</script>
+
+</html>
