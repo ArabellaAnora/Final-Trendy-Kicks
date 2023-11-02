@@ -599,7 +599,7 @@ $(document).ready(function(){
     id:1,
     name: "Nike Air Force 1",
     image: ["img/Products-Category/Product-Shoes-1.png","img/Products-Category/Product-Shoes-1.png","img/Products-Category/Product-Shoes-1.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "999.00",
     availability: "In-Stock",
     category: "Men (Casual)"
@@ -610,7 +610,7 @@ $(document).ready(function(){
     id:2,
     name: "Nike Mamba Fury",
     image: ["img/Products-Category/Product-Shoes-2.png","img/Products-Category/Product-Shoes-2.png","img/Products-Category/Product-Shoes-2.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "1,700.00",
     availability: "In-Stock",
     category: "Men (Basketball)"
@@ -620,7 +620,7 @@ $(document).ready(function(){
     id:3,
     name: "Nike Air Zoom Pegasus ",
     image: ["img/Products-Category/Product-Shoes-3.png","img/Products-Category/Product-Shoes-3.png","img/Products-Category/Product-Shoes-3.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "1,883.00",
     availability: "In-Stock",
     category: "Women (Running)"
@@ -630,7 +630,7 @@ $(document).ready(function(){
     id:4,
     name: "Kobe 6 Protro",
     image: ["img/Products-Category/Product-Shoes-4.png","img/Products-Category/Product-Shoes-4.png","img/Products-Category/Product-Shoes-4.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "599.00",
     availability: "In-Stock",
     category: "Men (Basketball)"
@@ -640,7 +640,7 @@ $(document).ready(function(){
     id:5,
     name: "Adidas Superstar",
     image: ["img/Products-Category/Product-Shoes-5.png","img/Products-Category/Product-Shoes-5.png","img/Products-Category/Product-Shoes-5.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "1,499.00",
     availability: "In-Stock",
     category: "Men (Casual)"
@@ -651,7 +651,7 @@ $(document).ready(function(){
     id:6,
     name: "Adidas Yeezy 350 ",
     image: ["img/Products-Category/Product-Shoes-6.png","img/Products-Category/Product-Shoes-6.png","img/Products-Category/Product-Shoes-6.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "1,645.00",
     availability: "In-Stock",
     category: "Men (Running)"
@@ -662,7 +662,7 @@ $(document).ready(function(){
     id:7,
     name: "PUMA Karmen Rebelle Trainers ",
     image: ["img/Products-Category/Product-Shoes-7.png","img/Products-Category/Product-Shoes-7.png","img/Products-Category/Product-Shoes-7.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "1,699.00",
     availability: "In-Stock",
     category: "Women (Casual)"
@@ -673,7 +673,7 @@ $(document).ready(function(){
     id:8,
     name: "Converse Chuck Taylor All-Star",
     image: ["img/Products-Category/Product-Shoes-10.png","img/Products-Category/Product-Shoes-10.png","img/Products-Category/Product-Shoes-10.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "655.00",
     availability: "In-Stock",
     category: "Men (Casual)"
@@ -683,7 +683,7 @@ $(document).ready(function(){
     id:9,
     name: "Onitsuka Tiger Mexico 66 SD for Men",
     image: ["img/Products-Category/Product-Shoes-12.png","img/Products-Category/Product-Shoes-12.png","img/Products-Category/Product-Shoes-12.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "599.00",
     availability: "In-Stock",
     category: "Men (Casual)"
@@ -693,7 +693,7 @@ $(document).ready(function(){
     id:10,
     name: "Chunky Sketchers",
     image: ["img/Products-Category/Product-Shoes-8.png","img/Products-Category/Product-Shoes-8.png","img/Products-Category/Product-Shoes-8.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "1,596.00",
     availability: "In-Stock",
     category: "Women (Casual)"
@@ -703,7 +703,7 @@ $(document).ready(function(){
     id:11,
     name: "Fila Disruptor",
     image: ["img/Products-Category/Product-Shoes-9.png","img/Products-Category/Product-Shoes-9.png","img/Products-Category/Product-Shoes-9.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "1,994.00",
     availability: "In-Stock",
     category: "Women (Casual)"
@@ -713,7 +713,7 @@ $(document).ready(function(){
     id:12,
     name: "Vans Old Skool",
     image: ["img/Products-Category/Product-Shoes-13.png","img/Products-Category/Product-Shoes-13.png","img/Products-Category/Product-Shoes-13.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "1,650.00",
     availability: "In-Stock",
     category: "Men (Casual)"
@@ -723,7 +723,7 @@ $(document).ready(function(){
     id:13,
     name: "New Balance 574",
     image: ["img/Products-Category/Product-Shoes-1.png","img/Products-Category/Product-Shoes-1.png","img/Products-Category/Product-Shoes-1.png",],
-    description: "This is Product 1. It's a great shoe! Yehey",
+    description: "This product is an OEM an original equipment manufacturer is generally perceived as a company that produces non-aftermarket parts and equipment that may be marketed by another manufacturer.",
     price: "655.00",
     availability: "In-Stock",
     category: "Men (Casual)"
