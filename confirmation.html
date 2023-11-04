@@ -364,7 +364,7 @@ onAuthStateChanged(auth, function(user) {
 		  document.getElementById("totalC").textContent = "₱" + parseFloat(localStorage.getItem("totalPayment")).toLocaleString();
           document.getElementById("payM").textContent = localStorage.getItem("paymentM" ,"E-Wallet");
 
-          document.getElementById("orderN").textContent = userData.first;
+          document.getElementById("orderN").textContent = userData.orderKey;
           document.getElementById("streetBilling").textContent = userData.add1;
           document.getElementById("cityBilling").textContent = userData.city;
           document.getElementById("countryBilling").textContent = userData.country1;
@@ -474,7 +474,7 @@ onAuthStateChanged(auth, function(user) {
 
 onAuthStateChanged(auth, function (user) {
   if (user) {
-    var uid = user.uid;
+    var uid = user.uid;	
 	
 	//profilevisit on click
 	var profilevisit = document.getElementById("profilevisit");

@@ -103,7 +103,7 @@
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
   import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail, createUserWithEmailAndPassword, sendEmailVerification } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
-  import { ref, set, getDatabase } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+  import { ref, get,set, getDatabase } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyA2FHdPmciDepMuSGvfjlMXLzVP2u0FLj8",
@@ -131,34 +131,59 @@ loginBtn.addEventListener("click", (e) => {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      if (user.emailVerified) {
-        document.getElementById("warning").style.color = "#155724";
-        document.getElementById("warning").style.backgroundColor = "#d4edda";
-        document.getElementById("warning").style.borderColor = "#c3e6cb";
-        document.getElementById('putemail').innerText = 'Logging in...';
-        document.getElementById("warning").style.display = "block";
-        document.getElementById("alert").style.display = "none";
+      var db = getDatabase(app);
 
-        setTimeout(function () {
-          if (localStorage.getItem("fromcheckout") === "true") {
-            window.location.href = "../checkout.html"; 
-            localStorage.removeItem("fromcheckout"); 
-          } else {
-            window.location.href = "../index.html"; 
-          }
-        }, 2000);
-      } else {
-        // User email not verified
-        document.getElementById('putemail').innerText = 'Email not verified.';
-        document.getElementById("warning").style.display = "block";
-        document.getElementById("alert").style.display = "none";
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-      document.getElementById("alert").style.display = "block";
-    });
-});
+      var userDataRef = ref(db, 'users/' + user.uid);
+      get(userDataRef)
+          .then((snapshot) => {
+            if (snapshot.exists()) {
+              const data = snapshot.val();
+
+              if (data.role === "admin") {
+                window.location.href = "../admin/inventory.html";
+              }
+              else if(data.role === "superadmin") {
+                window.location.href = "../super-admin/index.html";
+              } else {
+               
+              }
+            } else {
+              console.log("No data available");
+            }
+          })
+
+        if (user.emailVerified) {
+
+          
+          document.getElementById("warning").style.color = "#155724";
+          document.getElementById("warning").style.backgroundColor = "#d4edda";
+          document.getElementById("warning").style.borderColor = "#c3e6cb";
+          document.getElementById('putemail').innerText = 'Logging in...';
+          document.getElementById("warning").style.display = "block";
+          document.getElementById("alert").style.display = "none";
+
+          setTimeout(function () {
+                  if (localStorage.getItem("fromcheckout") === "true") {
+                    window.location.href = "../checkout.html";
+                   localStorage.removeItem("fromcheckout");
+                 } else {
+                    window.location.href = "../index.html";
+                  }
+                 }, 2000);
+
+          
+        } else {
+          // User email not verified
+          document.getElementById('putemail').innerText = 'Email not verified.';
+          document.getElementById("warning").style.display = "block";
+          document.getElementById("alert").style.display = "none";
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        document.getElementById("alert").style.display = "block";
+      });
+  });
 
 
 
@@ -200,6 +225,7 @@ signupBtn.addEventListener("click", (e) => {
             set(userRef, {
               name: name,
               email: email,
+              role: "user"
             });
           })
           .catch((error) => {
