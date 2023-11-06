@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "trendy-analytics-1699177864740",
+  "private_key_id": "1d41b678151688639d368f3657c0bc2ca81c3650",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDSyzq8VRm6g0SA\naM8PTBZHnepbETvTocISk1nTlaCdMD8BfRJBQTPJWRpV6ny+vj4dgEfPrhuSO7TU\nJclZ9/bkUYZt/1VQjkX9r4tbl4MXHjmUf005ligT0pAuVZp6OENK5Wy4wqKQtqgj\neTxF6gL5KckbTAdVOQ6l4VkBavUdl/cMLpb64Zw0NGdZnX5RdMDq6mpsjW1NBExr\nknHAFq2UbLh7RRBep5RztBuvLgJLy9PNDp6jLHJgimEx9AKSZtopGuHPe3jGTxPp\nqbpTTqd6RuI+dWxuF4VXeWcjxPs14QrT/nR/8jnY63MQ+SU7EffAvjmlqWPGPsYo\naoKtZuI5AgMBAAECggEAC6YMrsHmqDSPFWgFUj92hzpiLCpng5ZPrNpc90jwXWNg\nRfcpCjdd0uGER61ru5g0g0mWnlLNJf976pHUfs7pwzwAmWVH7AnSsxZPdY4pwb4r\nOSowRK+IMzE6g776CIlBqbrEL3EdDfF0GPK/Co+IHsgI+6PPz2014qOReTc1iK8m\nnDc84xwnuidkF7CVEROgePge8bi1TrhvLcD4GinFWlFkfaFL7i4yPl0irOv15sDp\nFAqQt2M6CQH+gHgkcZFDB5OhFi1ZKVptCqGvLsSslRirQn2nPpK5L5HtXcaze302\n1eJafL7ZMNTE2YYU9siQXvZYlfaT+UPXQe2qOhVAIQKBgQDqi4cQLk3Tbw0h1a3h\nlzsWHRzNoyqtpigJjCdNDCX6FMyqEUe6wfYAthoo41ZdMrLusXkNVSNFHMNlgjb/\nX0rsvtAU8+yR7b8ZuEfem/5/q39aMssSU8dvOt4BdSC5i0SdHkKLi/xNfF5+E1rE\nVttJoPdmCzAP+v+2FlyE9CKnWQKBgQDmE4HsQz+CzdJi2nhs7F0YZ8c9NkR74tss\nNpdOXPy1OVz4faNGijD8bpLVM3oRiJ5WIUp2cD5JFv7MXUyA387mFYTd0YQ4yKtg\nMsMpm2tzd6P6OnLI2j8jfrP7oRUtdpJnScPD5//uEB+psp3FCYi6OjK1XPKKnRMc\nojmqFYOV4QKBgBUZyGTkRYwoCX5pwuLwwBgVNmopq8VDlYaGXWLJHQGKrX7/Xvym\nRoN53pCfIz3vObnPrZxNdIbbN5kCRgBjilISOJYp+7aFNRQTSCP21MaXnzV2LF7R\nurd/DEoFR5RpuxqHhmUXivNNpRKimx/e0IunN5qulvxZEHhJOrmbXSLBAoGAaqum\ntBSlsI6euWhTJyUbMIKFFHNBozKVrVUOJ63jGF6lJSyS89SES7U0bJa2RMTTrFk4\n/dqidh6sObIUEzgw4+ocNP+7ztvy4OIILBU750gUBaLtrwPI/Dr1VXfkqrRrwmmn\n0v+QYB6nn3UJwt3dv4HWGtIiPXP/9WmdVKcu3+ECgYAVamjEcl/nJ1xLEfQY3vXP\ng8XDOx+AzgWjyXAc/s3TxMKDW5+ZjHSSVTLzTnRlNzANn4ZgXDtwLe3Y5X5pGMaI\nTV0i8ByW3nPXly5XqZm2aThpUJ1XPfxy88QYVxjO1US8PaDckAl5gAQtsP4w6uBe\ngJYqWTPkb/mv1b84LM/SSQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "starting-account-w5jdo8i09evv@trendy-analytics-1699177864740.iam.gserviceaccount.com",
+  "client_id": "109299561569421981134",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-w5jdo8i09evv%40trendy-analytics-1699177864740.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -66,6 +66,20 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
   <script src="plugins/nprogress/nprogress.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'G-9TDD84MPWK');
+</script>
+
+
+
+
 </head>
 
 
@@ -557,8 +571,76 @@
                
 
 
-                
-                  
+                <div class="row">
+                  <div class="col-xl-4">
+                    <!-- For Recent Transactions -->
+                    <div class="card card-default">
+                      <div class="card-header">
+                        <h2>Recent Transactions</h2>
+                      </div>
+                      <div class="card-body">
+                        <table class="table table-borderless table-thead-border">
+                          <thead>
+                            <tr>
+                              <th>Date</th>
+                              <th class="text-right">Amount</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="text-dark font-weight-bold">Gunter Reich</td>
+                              <td class="text-right">$2,560</td>
+                            </tr>
+                            <tr>
+                              <td class="text-dark font-weight-bold">Anke Kirsch</td>
+                              <td class="text-right">$1,720</td>
+                            </tr>
+                            <tr>
+                              <td class="text-dark font-weight-bold">Karolina Beer</td>
+                              <td class="text-right">$1,  230</td>
+                            </tr>
+                            <tr>
+                              <td class="text-dark font-weight-bold">Lucia Christ</td>
+                              <td class="text-right">$875</td>
+                            </tr>
+                          </tbody>
+                          <tfoot class="border-top">
+                            <tr>
+                              <td><a href="transaction-history.html" class="text-uppercase">See All Transactions</a></td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-xl-8">
+                    <div class="card card-default">
+                      <div class="card-header">
+                        <h2>Sales by Place</h2>
+                        <div id="country-sales-range" class="date-range">
+                          <i class="mdi mdi-calendar"></i>&nbsp;
+                          <span class="date-holder"></span>
+                          <i class="mdi mdi-menu-down"></i>
+                        </div>
+                      </div>
+                      <div class="card-body py-0" >
+                        <div class="row pb-4">
+                          <div class="col-lg-7 border-right-lg">
+                            <div class="vec-map-wrapper" >
+                              <div id="home-world" style="height: 100%; width: 100%;"></div>
+                            </div>
+                          </div>
+                          <div class="col-lg-5">
+                            <div class="chart-wrapper">
+                              <div id="horizontal-bar-chart"></div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
               
@@ -680,6 +762,45 @@
                       </div>
                     </div>
 
+                  
+
+                    <div class="col-xl-4">
+                      <!-- Page Views -->
+                      <div class="card card-default" id="page-views">
+                        <div class="card-header">
+                          <h2>Page Views</h2>
+                        </div>
+                        <div class="card-body py-0" data-simplebar style="height: 392px;">
+                          <table class="table table-borderless table-thead-border" id="analytics-table">
+                            <thead>
+                              <tr>
+                                <th>Page</th>
+                                <th class="text-right px-3">Page Views</th>
+                                <th class="text-right">Avg Time</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <!-- Data will be inserted here dynamically -->
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="card-footer bg-white py-4">
+                          <a href="#" class="text-uppercase">Audience Overview</a>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                    
+  </div>
+
+
+  
+  
+
+
+  
+
 
 
     
@@ -702,7 +823,7 @@
                     <script src="plugins/jvectormap/jquery-jvectormap-world-mill.js"></script>
                     <script src="plugins/jvectormap/jquery-jvectormap-us-aea.js"></script>
                     
-                    
+                    <script src="client.js"></script>
                     
                     <script src="plugins/daterangepicker/moment.min.js"></script>
                     <script src="plugins/daterangepicker/daterangepicker.js"></script>
@@ -778,7 +899,23 @@
                       const auth = getAuth(app);
                       const database = getDatabase(app);
                       const storage = getStorage(app);
-                  
+                      
+
+                      /*
+                      gapi.client.analytics.data.ga.get({
+                        'ids': 'ga:406527308', // Replace with your Property ID
+                        'start-date': '30daysAgo',
+                        'end-date': 'yesterday',
+                        'metrics': 'ga:pageviews',
+                      }).then(function(response) {
+                        var data = response.result.rows;
+                        // Process and display the data.
+                      });
+
+
+                    */
+
+
 
                       onAuthStateChanged(auth, function(user) {
                         const userUID = user.uid;
@@ -791,6 +928,11 @@
                       }
                       });
                       
+
+
+
+            
+
                       
 const signOutButton = document.getElementById('logoutleinow');
 signOutButton.addEventListener('click', () => {
