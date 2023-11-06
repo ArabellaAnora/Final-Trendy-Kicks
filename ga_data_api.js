@@ -1,5 +1,3 @@
-const axios = require('axios');
-
 propertyId = '406527308';
 const {BetaAnalyticsDataClient} = require('@google-analytics/data');
 
@@ -31,7 +29,7 @@ async function runReport() {
 
   console.log('working ba to hahah:');
   response.rows.forEach(row => {
-    console.log(row.dimensionValues[0], row.metricValues[0]);
+  console.log(row.dimensionValues[0], row.metricValues[0]);
   });
 }
 
