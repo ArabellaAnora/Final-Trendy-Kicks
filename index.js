@@ -1,13 +1,19 @@
 propertyId = '406527308';
 const {BetaAnalyticsDataClient} = require('@google-analytics/data');
+//const apexcharts = require('apexcharts');
+const path = require('path');
+const cors = require('cors'); // Import the 'cors' middleware
+
 
 // Using a default constructor instructs the client to use the credentials
 // specified in GOOGLE_APPLICATION_CREDENTIALS environment variable.
 const analyticsDataClient = new BetaAnalyticsDataClient();
 
 
+
 const express = require('express'); 
 const app = express(); 
+app.use(cors());
   
 app.get('/' , runReport)
    // 200 status code means OK 

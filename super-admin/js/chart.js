@@ -2342,7 +2342,7 @@ if (donutChart2 !== null) {
     },
 
     colors: ["#bb91f2", "#af81eb", "#9e6de0"],
-    labels: ["Desktop", "Tablet", "Mobile"],
+    labels: ["Desktop", "Other", "Mobile"],
     series: [45, 30, 25],
     legend: {
       show: true,
